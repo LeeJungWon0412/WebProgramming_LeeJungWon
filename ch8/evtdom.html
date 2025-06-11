@@ -1,0 +1,26 @@
+<!-- <html>
+    <head></head>
+    <body>
+        <input type="button" id="btnclk" value="버튼">
+        <script>
+            btnclk.onclick = function(){
+                alert('버튼 클릭');
+            }
+        </script>
+    </body>
+</html> -->
+
+<html>
+    <head></head>
+    <body>
+        <input type="button" id="btnclk" value="버튼" onclick="first()"/>
+        <script>
+            function first(){
+                alert('첫 번째 메시지');
+            }
+            btnclk.onclick = function(){
+                alert('두 번째 메시지');
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>게시글 상세</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <%- include('menu.html') %>
+
+    <div class="container mt-4">
+      <div class="card shadow" style="width:100%;">
+        <div class="card-header">
+          <h4 class="card-title"><%= data.title %></h4>
+        </div>
+        <div class="card-body">
+          <% if (data.imagepath) { %>
+            <img src="<%= data.imagepath %>" alt="첨부 이미지" class="img-fluid mb-3" style="max-width:400px;">
+          <% } %>
+          <p class="card-text"><%= data.content %></p>
+          <p class="text-muted">작성일 : <%= data.date ? data.date.toString().slice(0,10) : '' %></p>
+          <a href="/edit/<%= data._id %>" class="btn btn-outline-secondary me-2">수정하기</a>
+          <a href="/list" class="btn btn-outline-primary">목록</a>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

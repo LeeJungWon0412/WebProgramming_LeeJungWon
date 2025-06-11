@@ -1,0 +1,16 @@
+<html>
+  <head></head>
+  <body>
+    <input type="button" id="btnclk" value="버튼">
+    <script>
+      let obj = {
+        handleEvent(event){
+          alert(event.type);
+          alert("x좌표 : " + event.clientX);
+          alert("y좌표 : " + event.clientY);
+        }
+      }
+      btnclk.addEventListener('click', obj);
+    </script>
+  </body>
+</html>
