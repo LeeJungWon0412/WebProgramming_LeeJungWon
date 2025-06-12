@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 스터디 페이지</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        header {
+            background-color: #e34c26;
+            color: white;
+            padding: 2em 0;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #ddd;
+            padding: 0.5em 0;
+            text-align: center;
+        }
+
+        nav a {
+            display: inline-block;
+            padding: 0.5em 1em;
+            text-decoration: none;
+            color: #333;
+        }
+
+        nav a:hover {
+            background-color: #ccc;
+        }
+
+        main {
+            padding: 20px;
+        }
+        article {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        article h2 {
+            color: #333;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+        pre {
+            background-color: #f9f9f9;
+            padding: 10px;
+            border: 1px solid #eee;
+            border-radius: 4px;
+            overflow-x: auto;
+        }
+        code {
+            font-family: monospace;
+        }
+        ul, ol {
+            padding-left: 20px;
+            margin-bottom: 1em;
+        }
+        dl {
+            margin-bottom: 1em;
+        }
+        dt {
+            font-weight: bold;
+        }
+        dd {
+            margin-left: 20px;
+            margin-bottom: 0.5em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>HTML5 스터디 페이지</h1>
+    </header>
+
+    <nav>
+        <a href="#what-is-html5">HTML5이란?</a>
+        <a href="#html5-features">HTML5의 주요 기능</a>
+        <a href="#html-structure">HTML5의 기본 구조</a>
+        <a href="#html-tags">HTML5의 태그</a>
+    </nav>
+
+    <main>
+        <article id="what-is-html5">
+            <h2>HTML5이란?</h2>
+            <p>HTML5는 Hyper Text Markup Language 5의 약자로, 웹 페이지를 만들고 구성하는 데 사용되는 최신 버전입니다. HTML5는 웹 기술의 발전과 함께, 더 풍부하고, 기능적이며, 모바일 친화적인 웹 페이지와 애플리케이션을 만들 수 있도록 다양한 기능을 추가한 버전입니다.</p>
+        </article>
+
+        <article id="html5-features">
+            <h2>HTML5의 주요 기능</h2>
+            <ul>
+                <li><strong>새로운 구조적 태그:</strong> <code>&lt;header&gt;</code>, <code>&lt;footer&gt;</code>, <code>&lt;article&gt;</code> 등</li>
+                <li><strong>멀티미디어 지원:</strong> <code>&lt;audio&gt;</code>, <code>&lt;video&gt;</code></li>
+                <li><strong>폼 입력 기능 향상:</strong> <code>&lt;input type="email"&gt;</code>, <code>&lt;input type="date"&gt;</code>, <code>&lt;input type="tel"&gt;</code> 등</li>
+                <li><strong>그래픽 기능:</strong> <code>&lt;canvas&gt;</code>, <code>&lt;svg&gt;</code></li>
+                <li><strong>API 지원:</strong>
+                    <ul>
+                        <li><strong>Web Storage:</strong> 로컬 저장소를 사용해 클라이언트 측 데이터를 저장할 수 있음.</li>
+                        <li><strong>Geolocation:</strong> 사용자의 위치 정보를 얻을 수 있음.</li>
+                        <li><strong>Web Workers:</strong> 백그라운드 스레드를 사용해 웹 애플리케이션의 성능을 향상시킬 수 있음.</li>
+                    </ul>
+                </li>
+                <li><strong>모바일 최적화:</strong> 뷰포트 설정을 통해 모바일 장치에서 웹 페이지를 최적화하여 보여줄 수 있음.</li>
+                <li><strong>간단한 문서 선언:</strong> <code>&lt;!DOCTYPE html&gt;</code> 으로 문서 선언이 단순화되어, 코드가 깔끔하고 이해하기 쉬워짐.</li>
+            </ul>
+        </article>
+
+        <article id="html-structure">
+            <h2>HTML5의 기본 구조</h2>
+            <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;페이지 제목&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;!-- 실제 웹 페이지 내용 --&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+            <ul>
+                <li><code>&lt;!DOCTYPE html&gt;</code>: 문서가 HTML5 문서임을 선언함.</li>
+                <li><code>&lt;html&gt;</code>: HTML 문서의 시작과 끝을 나타냄.</li>
+                <li><code>&lt;head&gt;</code>: 문서의 메타정보(문서 제목, 문자 인코딩 등)를 포함함.</li>
+                <li><code>&lt;body&gt;</code>: 실제 웹 페이지의 내용이 포함되는 부분.</li>
+            </ul>
+        </article>
+
+        <article id="html-tags">
+            <h2>HTML5의 태그</h2>
+            <dl>
+                <dt><code>&lt;a&gt;</code></dt>
+                <dd>: 텍스트에 링크를 설정함. <pre><code><a href="https://ssu.ac.kr" target="_blank">숭실대학교</a></code></pre></dd>
+                <dt><code>&lt;abbr&gt;</code></dt>
+                <dd>: 텍스트를 생략어로 지정함. <pre><code><abbr title="Soongsil University">SSU</abbr></code></pre></dd>
+                <dt><code>&lt;bdo&gt;</code></dt>
+                <dd>: 텍스트의 방향을 명시적으로 지정함. <pre><code><bdo dir="ltr">숭실대학교</bdo></code></pre><pre><code><bdo dir="rtl">숭실대학교</bdo></code></pre></dd>
+                <dt><code>&lt;br&gt;</code></dt>
+                <dd>: 텍스트를 강제로 줄바꿈 함. <pre><code>안녕하세요.<br>반갑습니다.</code></pre></dd>
+                <dt><code>&lt;button&gt;</code></dt>
+                <dd>: 버튼을 생성함. <pre><code><button type="submit" value="버튼">버튼</button></code></pre></dd>
+                <dt><code>&lt;del&gt;</code></dt>
+                <dd>: 문서로부터 삭제되었음을 표현함. <pre><code><del>안녕하세요. 반갑습니다.</del></code></pre></dd>
+                <dt><code>&lt;dl&gt;</code>, <code>&lt;dt&gt;</code>, <code>&lt;dd&gt;</code></dt>
+                <dd>: <code>&lt;dl&gt;</code>요소의 용어-설명 그룹에서 각각 값, 정의, 설명을 나타냄. <pre><code><dl><dt>숭실대학교</dt><dd>글로벌미디어학부</dd></dl></code></pre></dd>
+                <dt><code>&lt;input&gt;</code></dt>
+                <dd>: 폼 안에 기본적인 컨트롤을 생성함. <pre><code><p>아이디 : <input type="text" name="yourid" id="yourid" value="" size="20">   비밀번호 : <input type="password" name="yourpassword" id="yourpassword" value="" size="20">
+                </p><p>남자 <input type="radio" name="sex" value="male">   여자 <input type="radio" name="sex" value="female">
+                </p><p>1번 <input type="checkbox" name="menu" value="no1"><br>2번 <input type="checkbox" name="menu" value="no2"><br>3번 <input type="checkbox" name="menu" value="no3">
+                </p></code></pre></dd>
+                <dt><code>&lt;progress&gt;</code></dt>
+                <dd>: 진행 상황을 표시함. <pre><code><progress value="70" max="100">70%</progress>
+                </code></pre></dd>
+                <dt><code>&lt;ruby&gt;</code></dt>
+                <dd>: 루비 주석을 표시함. <pre><code><ruby>漢<rt>かん</rt>字<rt>じ</rt></ruby></code></pre></dd>
+                <dt><code>&lt;select&gt;</code></dt>
+                <dd>: 선택목록을 생성함. <pre><code><select name="category">
+                    <optgroup label="상의">
+                       <option value="big1" selected="selected">대</option>
+                       <option value="mid1">중</option>
+                       <option value="small1">소</option>
+                    </optgroup>
+                    <optgroup label="하의">
+                       <option value="big2">대</option>
+                       <option value="mid2">중</option>
+                       <option value="small2">소</option>
+                    </optgroup></select></code></pre></dd>
+                
+            </dl>
+        </article>
+    </main>
+</body>
+</html>

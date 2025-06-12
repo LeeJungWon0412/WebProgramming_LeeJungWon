@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML과 CSS</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            height: 100vh;
+            display: flex;
+            overflow: hidden;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        .side {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 3rem;
+            font-weight: 700;
+            color: white;
+            text-decoration: none;
+            width: 50%;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .side::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(0,0,0,0) 70%);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+        
+        .side:hover {
+            width: 60%;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+            z-index: 10;
+        }
+        
+        .side:hover::before {
+            opacity: 1;
+        }
+        
+        .html-side {
+            background-color: #e34c26;
+        }
+        
+        .css-side {
+            background-color: #264de4;
+        }
+        
+        .logo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transform: translateY(0);
+            transition: transform 0.3s ease;
+        }
+        
+        .side:hover .logo {
+            transform: translateY(-10px);
+        }
+        
+        .logo-text {
+            font-size: 1.2rem;
+            margin-top: 10px;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.3s ease;
+        }
+        
+        .side:hover .logo-text {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <a href="html5_site.html" class="side html-side">
+        <div class="logo">
+            HTML란?
+            <span class="logo-text">HyperText Markup Language</span>
+        </div>
+    </a>
+    <a href="css3.html" class="side css-side">
+        <div class="logo">
+            CSS란?
+            <span class="logo-text">Cascading Style Sheets</span>
+        </div>
+    </a>
+</body>
+</html>

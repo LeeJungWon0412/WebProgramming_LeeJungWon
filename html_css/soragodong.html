@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>마법의 고민 해결책</title>
+  <style>
+    body {
+      background-color: #bdb9b9;
+      text-align: center;
+      padding: 100px;
+    }
+    #main {
+      background: white;
+      padding: 50px;
+      border-radius: 15px;
+      max-width: 700px;
+      margin: auto;
+    }
+    textarea {
+      width: 100%;
+      padding: 10px;
+      resize: none;
+      border-radius: 10px;
+      margin-bottom: 30px;
+    }
+    button {
+      padding: 10px 20px;
+      background-color: #6a5acd;
+      color: white;
+      border: none;
+      border-radius: 10px;
+    }
+    #result {
+      margin-top: 50px;
+      font-size: 2em;
+      font-weight: bold;
+      color: #000000;
+    }
+  </style>
+</head>
+<body>
+  <div id="main">
+    <h1>🎩 마법의 고민 해결책 📖</h1>
+    <textarea id="Gomin" rows="3" placeholder="당신의 고민을 적어보세요..."></textarea><br>
+    <button onclick="solution()">해결책</button>
+    <div id="result"></div>
+  </div>
+
+  <script>
+    const solve = [
+      "때로는 느리게 가는 게 빠른 길이다.",
+      "중요한 건 지금 무엇을 하느냐다.",
+      "자신을 믿고 앞으로 나아가라.",
+      "판단은 감정이 가라앉은 뒤에 해라.",
+      "가짜 확신에 속지 마라.",
+      "멈추는 건 죄가 아니지만, 서는 건 끝이다.",
+      "세상은 생각보다 단순하다.",
+      "너무 멀리 오지 않았다면, 돌아가도 된다.",
+      "복잡하면 잘못된 거다.",
+      "모든 것은 연결되어 있다.",
+      "자만하지 마라.",
+      "반전이 있다.",
+      "내 대답은 YES",
+      "내 대답은 NO",
+      "의논하라. 혼자 되는 것은 없다.",
+      "일을 뒤로 미루지 마라.",
+      "자세히 알아보고 결정해라.",
+      "좀 더 생각해봐라.",
+      "핑계대지 마라.",
+      "경험해 보는 것이 좋다.",
+      "장애물이 있다. 잘 헤쳐나가라.",
+      "좋은게 좋은 거다. 좋은 쪽으로 생각해라."
+    ];
+
+    function solution() {
+      const userGomin = document.getElementById("Gomin").value.trim();
+      const solResult = document.getElementById("result");
+
+      if (userGomin == "") {
+        solResult.textContent = "고민을 입력해야 마법이 작동합니다...";
+        return;
+      }
+
+      const randint = Math.floor(Math.random() * solve.length);
+      solResult.textContent = solve[randint];
+    }
+  </script>
+</body>
+</html>
